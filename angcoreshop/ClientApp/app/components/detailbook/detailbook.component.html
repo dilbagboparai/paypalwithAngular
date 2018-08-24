@@ -1,0 +1,29 @@
+﻿
+<h1>Item Detail</h1>
+
+<table border="3" cellpadding="20" cellspacing="20" style="width: 60%; height:100%;">
+    <tr>
+        <td>
+            <div style="display: block; margin: 10%; width: 20%;">
+                <img src="{{bookList.bPic}}" height="300" width="250" /><br />
+            </div>
+            <br />
+        </td>
+        <td>
+            <div style="display: block; margin:20%; width: 80%;">
+                <b>Itemno : </b>{{bookList.bId}}<br />
+                <b>Name : </b>{{bookList.bName}}<br>
+                <b>Description : </b>{{bookList.bDsc}}<br />
+                <h4 style="color:darkgreen">Rs : {{bookList.bPrice}} /-</h4>
+                <br />
+                <div>
+                    <img src="../../../../icon/add to cart.gif" (click)="addtocart(bookList.bId)" height="40" width="150" />
+                </div><br />
+                <input type="image" name="submit"
+                       src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                       alt="PayPal - The safer, easier way to pay online" (click)="buy()" height="40" width="150">
+                <br />
+            </div>
+        </td>
+    </tr>
+</table>

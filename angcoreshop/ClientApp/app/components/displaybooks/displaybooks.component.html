@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>HOME</h1>
+    <br />
+    <!--{{test}}-->
+    <table class="table table-bordered">
+        <tr>
+            <td *ngFor="let b of bookList">
+                <div style="display: block; margin-left: auto; margin-right: auto; width: 90%;">
+                    <a id="a" [routerLink]="['/Books/Detail_Rec/', b.bId]">
+                        Detail<br />
+                        <img src="{{b.bPic}}" height="100" width="100" /><br />                      
+                        <b>Item : </b>{{b.bId}}<br />
+                        <b>Name : </b>{{b.bName}}<br>
+                        <b>Description : </b>{{b.bDsc}}<br />
+                        <h4 style="color:darkgreen">Rs : {{b.bPrice}} /-</h4>
+                    </a>
+                    <div>
+                        <img src="../../../../icon/add to cart.gif" (click)="addtocart(b.bId)" />
+                    </div><br />
+                    <input type="image" name="submit"
+                           src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                           alt="PayPal - The safer, easier way to pay online" (click)="buy()">
+                    <br /><br />
+                </div>
+            </td>
+            <!--<td><a [routerLink]="['/emp/Find_Rec/', e.eno]">Edit</a></td>
+            <td><a [routerLink]="" (click)="delete(e.eno)">Delete</a></td>-->
+        </tr>
+    </table>
+</body>
+</html>

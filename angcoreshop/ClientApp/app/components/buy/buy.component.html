@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="hspharwinderG1@gmail.com">
+        <input type="hidden" name="item_name" value="Memorex 256MB Memory Stick">
+        <input type="hidden" name="item_number" value="MEM32507725">
+        <input type="hidden" name="amount" value="3">
+        <input type="hidden" name="tax" value="1">
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="currency_code" value="INR">
+
+        <!-- Enable override of buyers's address stored with PayPal . -->
+        <input type="hidden" name="address_override" value="1">
+        <!-- Set variables that override the address stored with PayPal. -->
+        <input type="hidden" name="first_name" value="John">
+        <input type="hidden" name="last_name" value="Doe">
+        <input type="hidden" name="address1" value="345 Lark Ave">
+        <input type="hidden" name="city" value="San Jose">
+        <input type="hidden" name="state" value="CA">
+        <input type="hidden" name="zip" value="95121">
+        <input type="hidden" name="country" value="US">
+
+    </form>
+    <div style="margin:150px 150px; color: green">
+        <h3>Please wait while trasaction is compeleting.................</h3>
+    </div>
+</body>
+</html>
+
+
+
+<!--<input type="number" [(ngModel)]="finalAmount" style="padding-bottom: 10px;">
+<h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+<div id="paypal-checkout-btn"></div>-->
+
+
+

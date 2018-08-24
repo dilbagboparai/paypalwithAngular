@@ -1,0 +1,47 @@
+﻿
+<h1>Add To Cart</h1>
+
+<table border="5">
+    <tr>
+        <td>
+            <img src="{{bookList.bPic}}" height="100" width="150" style="margin:20px 20px 20px 20px" /><br />
+
+            <br />
+        </td>
+        <td>
+            <div style="margin:10px 10px 10px 20px">
+                <b>Itemno : </b>{{bookList.bId}}<br />
+                <b>Name : </b>{{bookList.bName}}<br>
+                <h4 style="color:darkgreen">Rs : {{bookList.bPrice}} /-</h4>
+            </div>
+        </td>
+        <td *ngIf="1 == editRowId">
+            <div style="margin:20px 20px 20px 20px">
+                <input [(ngModel)]="item">
+                <button class="btn btn-default" (click)="toggletwo(-1,item)">Ok</button>
+            </div>
+        </td>
+        <td *ngIf="1 !== editRowId" (click)="toggle(1)">
+            <div style="margin:20px 20px 20px 20px">
+                {{item}}
+                <!--<button class="btn btn-default" (click)="cancel()">Edit</button>-->
+            </div>
+        </td>
+        <td>
+            <!--<div style="margin:20px 20px 20px 20px">
+                <input type="image" name="submit"
+                       src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                       alt="PayPal - The safer, easier way to pay online" (click)="buy()">
+            </div>-->
+        </td>
+    </tr>
+</table>
+<span style="float:right; margin-top:100px; margin-right:100px;">
+    <h3 style="color:darkgreen">Total   :    {{subtotal}} /-</h3>
+
+    <input type="number" [(ngModel)]="subtotal" style="padding-bottom: 10px;">
+    <h2 *ngIf="paypalLoad">Paypal button is loading</h2>
+    <div id="paypal-checkout-btn"></div>
+</span>
+
+
